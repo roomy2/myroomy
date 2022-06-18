@@ -3,7 +3,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 module.exports = {
-  PORT: process.env.PORT,
+  PORT: process.env.PORT || 8000,
   DB_USERNAME: process.env.DB_USERNAME,
   DB_PASSWORD: process.env.DB_PASSWORD,
   Email_Id: process.env.Email_Id,

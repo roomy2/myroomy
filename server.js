@@ -13,7 +13,7 @@ const dbURL = require("./config/db.config").urlCloud;
 // Disable to use useFindAndModify globally
 mongoose.set("useFindAndModify", false);
 mongoose
-  .connect(dbURL, { useNewUrlParser: true })
+  .connect(dbURL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("DB Connected"))
   .catch(err => {
     console.log(`DB unconnected\nError name: ${err.name}\nExiting...`);

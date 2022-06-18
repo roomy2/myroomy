@@ -4,7 +4,7 @@ const fs = require("fs");
 const bcrypt = require("bcryptjs");
 const cryptoRandomString = require("crypto-random-string");
 
-const SendMail = require("./SendMail");
+// const SendMail = require("./SendMail");
 
 module.exports.signup = (req, res) => {
   if (!req.isAuthenticated()) {
@@ -96,16 +96,16 @@ module.exports.add = (req, res) => {
                 .then(result => {
                   let link = `${req.protocol}://${req.get("host")}`;
                   console.log("my libk " + link);
-                  SendMail.verify(email, token, link)
-                    .then(result2 => {
-                      console.log("Email Sended Success");
-                    })
-                    .catch(err => {
-                      console.log("Verify Email Error : ", err);
-                    });
+                  // SendMail.verify(email, token, link)
+                  //   .then(result2 => {
+                  //     console.log("Email Sended Success");
+                  //   })
+                  //   .catch(err => {
+                  //     console.log("Verify Email Error : ", err);
+                  //   });
                   req.flash(
                     "success",
-                    "Account maded successfully, Check your email to Verify"
+                    "Account successfully created"
                   );
                   res.redirect("/user/login");
                 })
