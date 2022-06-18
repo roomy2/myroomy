@@ -62,7 +62,7 @@ router.post(
       .catch(err => {
         console.log(err.name);
         req.flash("error", "Error in the Request");
-        res.redirect("/user/new");
+        res.redirect("/");
       });
   }
 );
