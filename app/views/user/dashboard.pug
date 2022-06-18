@@ -1,0 +1,31 @@
+extends ./../parts/_layout.pug
+
+block content
+	div.dashboard
+		div.detailContainer.bg-white
+			h4.text-primary User Detail
+			div.imageContainer
+				img(src="/user/"+user.userid+'/photo', alt="Photo")
+			div.detail
+				ul
+					li
+						span Name
+						span #{user.name}
+					li
+						span UserID
+						span #{user.userid}
+					li
+						span Email
+						span #{user.email}
+					li
+						span Mobile Number
+						span #{user.mobileNumber}
+					li
+						span Address
+						span #{user.address}
+					li
+						- let status =  user.verified ===true?'Verified':'Not Verified'
+						span Status
+						span #{status}
+			.editLink
+				a(href="/user/edit").btn.btn-outline-primary.btn-sm Edit Detail

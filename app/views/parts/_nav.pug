@@ -1,0 +1,34 @@
+nav.navContainer
+	div.navIcon
+		<i class="material-icons md-36 navOperIcon">menu</i>	
+	div.mainLogo
+		a(href="/")
+			img(src="/images/logo.png", alt="logo")
+	div.navLinks.d-none
+		ul
+			li
+				a(href="/") Home 
+			if user
+				li
+					a(href="/user/dashboard") Dashboard
+				//- li
+				//- 	a(href="/room/all") Rooms
+			if user && user.userid === 'admin'
+				li
+					a(href="/room/new") Add Room
+				li
+					a(href="/user/all") All Users
+	div.userAction
+		ul
+			if user
+				li
+					img.userAvtar.mr-2(src="/user/"+user.userid+"/photo" alt="Photo")
+				li
+					a.btn.btn-outline-primary.btn-sm(href="/user/logout") Logout
+			else
+				if title !== 'Login'
+					li
+						a.btn.btn-outline-primary.btn-sm.mr-2(href="/user/login") Login
+				if title !== "Sign Up"
+					li
+						a.btn.btn-outline-primary.btn-sm(href="/user/signup") Signup

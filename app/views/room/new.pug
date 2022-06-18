@@ -1,0 +1,38 @@
+extends ./../parts/_layout.pug
+
+block content
+	div.newRoomContainer.p-3.bg-white.rounded.m-3.mx-md-auto
+		h4.text-muted.text-center.mb-4.mt-3 Add a new Room
+		div.row
+			form(action="/room/add" method="post" enctype="multipart/form-data").col-10.col-md-6.mx-auto.pl-0
+				div.form-group
+					label(for="location").font-weight-bold Location
+					textarea.ml-3(name='location' class="form-control" id="location" rows="3" placeholder="e.g. Bijnor" required)
+				div.form-group
+					p.font-weight-bold Features
+					div.ml-4
+						div.form-check
+							input#toilet.form-check-input(type='checkbox' name='features' value='toilet')
+							label(for='toilet').form-check-label Toilet
+						div.form-check
+							input#bathroom.form-check-input(type='checkbox' name='features' value='bathroom')
+							label(for='bathroom').form-check-label Bathroom
+						div.form-check
+							input#kitchen.form-check-input(type='checkbox' name='features' value='kitchen')
+							label(for='kitchen').form-check-label Kitchen
+						div.form-check
+							input#electricity.form-check-input(type='checkbox' name='features' value='electricity')
+							label(for='electricity').form-check-label Electricity
+				div.form-group
+					label(for="photo").font-weight-bold Add Photos
+					input.ml-3(type="file" id='photo' name="photos" accept="image/*" class='form-control-file' multiple)
+				div.form-group.row
+					label(for="persons").col-form-label.col-8.font-weight-bold No. of Persons can live
+					div.col-4
+						input#persons(type="number" name="persons" required).form-control
+				div.form-group.row
+					label(for="price").col-form-label.col-8.font-weight-bold Price(₹) per month
+					div.col-4
+						input#price.form-control(type="number", name="price" required)
+				div.text-center.mb-3.mt-5
+					input.btn.btn-primary(type='submit' value='Submit')

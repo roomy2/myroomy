@@ -1,0 +1,344 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #ffa7ff;
+}
+body .bg {
+  width: 100%;
+  height: 100%;
+  -webkit-clip-path: polygon(100% 0, 100% 38%, 45% 100%, 0 100%, 0 0);
+  clip-path: polygon(100% 0, 100% 38%, 45% 100%, 0 100%, 0 0);
+  background-color: #5280ffd8;
+  position: fixed;
+  z-index: -1;
+}
+body .mainContainer {
+  padding-top: 16vw;
+  padding-bottom: 1em;
+}
+
+.navContainer {
+  position: fixed;
+  width: 100%;
+  height: 12vw;
+  z-index: 5;
+  box-shadow: 0 0 5px #6e6e6e;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 1.5vw;
+}
+.navContainer div ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navContainer div ul li {
+  display: inline-block;
+}
+.navContainer .navIcon {
+  cursor: pointer;
+  padding: 0.6vw;
+  display: flex;
+  align-items: center;
+  border-radius: 0.2vw;
+  background-color: #ffffff;
+}
+.navContainer .navIcon i {
+  font-size: 7.5vw;
+}
+.navContainer .mainLogo {
+  margin-left: 3.5vw;
+  flex: auto;
+}
+.navContainer .mainLogo img {
+  max-width: 7em;
+  max-height: 9vw;
+}
+.navContainer .navLinks {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 12vw;
+  left: 0em;
+  z-index: 4;
+  background-color: #5280ffec;
+}
+.navContainer .navLinks ul {
+  margin-top: 8vw;
+}
+.navContainer .navLinks ul li {
+  display: block;
+  text-align: center;
+  margin: 3px;
+}
+.navContainer .navLinks ul li a {
+  display: inline-block;
+  padding: 2vw;
+  font-size: 3.8vw;
+  margin: 1.5vw auto;
+  width: 40vw;
+  border-bottom: 1px solid white;
+  text-decoration: none;
+  color: white;
+}
+.navContainer .navLinks ul li a:hover {
+  transition: 0.2s ease-out;
+  background-color: white;
+  color: #5280ffec;
+}
+.navContainer .userAction img.userAvtar {
+  box-shadow: 0 0 2px 1px black;
+  display: inline-block;
+  height: 8vw;
+  width: 8vw;
+  max-width: 2.5em;
+  max-height: 2.5em;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.navContainer .userAction ul li a {
+  font-size: 3.4vw;
+  padding: 1vw 2vw;
+}
+
+.dashboard {
+  margin: 1em;
+}
+.dashboard .detailContainer {
+  border-radius: 4px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.671);
+  padding: 1em 0.8em;
+  max-width: 50em;
+  margin: auto;
+}
+.dashboard .detailContainer h4 {
+  text-align: center;
+  margin: 4vw 0;
+  font-size: 5.5vw;
+}
+.dashboard .detailContainer .imageContainer {
+  margin-left: 10vw;
+}
+.dashboard .detailContainer .imageContainer img {
+  width: 100%;
+  max-width: 15vw;
+  border-radius: 4px;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.671);
+}
+.dashboard .detailContainer .detail {
+  padding: 1em 0;
+}
+.dashboard .detailContainer .detail ul {
+  list-style: none;
+  margin: 0;
+  padding: 0em;
+  background-color: #fff;
+}
+.dashboard .detailContainer .detail ul li {
+  display: flex;
+  color: #474747;
+  text-align: center;
+}
+.dashboard .detailContainer .detail ul li span:nth-child(1) {
+  flex: 40%;
+}
+.dashboard .detailContainer .detail ul li span:nth-child(2) {
+  flex: 60%;
+}
+.dashboard .detailContainer .detail ul li span {
+  border-radius: 4px;
+  margin: 0 2px;
+  background-color: #e2e2e2;
+  margin-bottom: 2px;
+  padding: 0.2em 0;
+  font-size: 3.2vw;
+}
+.dashboard .detailContainer .editLink {
+  text-align: center;
+}
+.dashboard .detailContainer .editLink a {
+  font-size: 3.5vw;
+  padding: 1vw 2vw;
+}
+
+.allRoomContainer .row {
+  margin: 0;
+}
+.allRoomContainer .row a {
+  text-decoration: none;
+}
+.allRoomContainer .row a > div {
+  height: calc(28vw);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.384);
+}
+.allRoomContainer .row a > div:hover {
+  transition: 0.1s ease-in;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.788);
+}
+.allRoomContainer .row a > div h4 {
+  font-size: 3.5vw;
+  margin-bottom: 4px;
+  color: #5280ff;
+}
+.allRoomContainer .row a > div .facilities {
+  color: #474747;
+  font-weight: bold;
+  font-size: 3vw;
+}
+.allRoomContainer .row a > div .facilities ul li {
+  font-weight: 500;
+  font-size: 3vw;
+  margin-right: 1vw;
+}
+.allRoomContainer .row a > div .infoContainer {
+  color: red;
+  font-size: 3vw;
+}
+.allRoomContainer .row a > div img {
+  margin: 0.5vw;
+  width: 100%;
+  height: 27vw;
+  object-fit: cover;
+}
+
+.loginContainer,
+.signupContainer {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.589);
+  max-width: 36em;
+  margin: 2em 1em;
+}
+
+.msgC {
+  max-width: 40em;
+  margin: auto;
+}
+
+.roomContainer {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.589);
+  max-width: 50em;
+}
+
+.newRoomContainer {
+  max-width: 50em;
+  padding: 1em;
+  border-radius: 5px;
+  margin: 1em;
+}
+.newRoomContainer h4 {
+  margin: 1.5em 0;
+}
+
+@media (min-width: 600px) {
+  .navContainer {
+    height: 4em;
+  }
+  .navContainer .navIcon {
+    display: none;
+  }
+  .navContainer .mainLogo {
+    max-width: 10em;
+  }
+  .navContainer .navLinks {
+    display: inline-block !important;
+    position: initial;
+    flex: auto;
+    width: initial;
+    height: initial;
+    z-index: initial;
+    background-color: #ffffff;
+  }
+  .navContainer .navLinks ul {
+    margin: 0;
+  }
+  .navContainer .navLinks ul li {
+    display: inline-block;
+    margin: 0;
+  }
+  .navContainer .navLinks ul li a {
+    background-color: #fff;
+    padding: 0.1em 0.3em;
+    margin: 0 0.3em;
+    text-decoration: none;
+    color: #5280ff;
+    width: initial;
+    font-size: 1.2em;
+  }
+  .navContainer .navLinks ul li a:hover {
+    background-color: #5280ffec;
+    border-radius: 3px;
+    color: white;
+  }
+  .navContainer .userAction ul li a {
+    font-size: 1em;
+    padding: 0.3em 0.6em;
+  }
+
+  .dashboard .detailContainer h4 {
+    margin: 0.5em 0;
+    font-size: 1.8em;
+  }
+  .dashboard .detailContainer .imageContainer {
+    margin-left: 5em;
+  }
+  .dashboard .detailContainer .imageContainer img {
+    max-width: 6em;
+  }
+  .dashboard .detailContainer .detail {
+    padding: 2em;
+  }
+  .dashboard .detailContainer .detail ul li span {
+    font-size: 1.1em;
+  }
+  .dashboard .detailContainer .editLink a {
+    font-size: 1.2em;
+    padding: 0.2em 0.4em;
+  }
+
+  .allRoomContainer {
+    max-width: 50em;
+    margin: auto;
+  }
+  .allRoomContainer .row {
+    margin: 0;
+  }
+  .allRoomContainer .row a {
+    text-decoration: none;
+  }
+  .allRoomContainer .row a > div {
+    height: calc(8em + 4vw);
+  }
+  .allRoomContainer .row a > div h4 {
+    font-size: 1.3em;
+    margin-top: 5px;
+  }
+  .allRoomContainer .row a > div .facilities {
+    font-size: 1.1em;
+  }
+  .allRoomContainer .row a > div .facilities ul li {
+    font-size: 1em;
+    margin-right: 0.1em;
+  }
+  .allRoomContainer .row a > div .infoContainer {
+    font-size: 1em;
+  }
+  .allRoomContainer .row a > div img {
+    margin: 0;
+    width: 100%;
+    height: calc(8em + 4vw);
+    object-fit: cover;
+  }
+
+  body .mainContainer {
+    padding-top: 12vw;
+  }
+
+  .newRoomContainer {
+    margin: 1em auto;
+  }
+
+  .loginContainer,
+.signupContainer {
+    margin: 3em auto;
+  }
+}
