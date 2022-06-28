@@ -25,10 +25,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  // addharNumber: {
-  // 	type: Number,
-  // 	required: true
-  // },
+  addharNumber: {
+  	type: Number,
+   	required: true
+   },
   token: String,
   verified: {
     type: Boolean,
