@@ -29,26 +29,26 @@ router.post("/editted", ensureAuthenticated, user.editted);
 
 router.get("/verify/:email/:token", (req, res) => {
   User.findOne({ email: req.params.email })
-    .then(result => {
+    .then((result) => {
       if (result.token === req.params.token) {
         User.findOneAndUpdate(
           { _id: result._id },
           {
             $unset: { token: 1 },
             $set: {
-              verified: true
-            }
+              verified: true,
+            },
           }
         )
-          .then(result1 => {
+          .then((result1) => {
             console.log(result1.email + " verified");
             res.send(
-              "Verified Successfully, You can login now at<a href='https://myroomy.herokuapp.comm/user/login'>Login</a>"
+              "Verified Successfully, You can login now at<a href='https://myroomy.herokuapp.com/user/login'>Login</a>"
             );
             // req.flash("success", "Verified Successfully");
             // res.redirect("user/login");
           })
-          .catch(err => {
+          .catch((err) => {
             console.log(err);
             res.send("Error In Verification");
           });
@@ -56,7 +56,7 @@ router.get("/verify/:email/:token", (req, res) => {
         res.send("Token not matched");
       }
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(err);
     });
 });
