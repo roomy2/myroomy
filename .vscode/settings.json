@@ -1,5 +1,7 @@
 {
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
-  "npm.enableScriptExplorer": false
+  "cSpell.words": [
+    "Mailjet"
+  ]
 }
