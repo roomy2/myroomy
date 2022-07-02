@@ -19,8 +19,16 @@ module.exports.signup = (req, res) => {
 
 module.exports.add = (req, res) => {
   const token = cryptoRandomString({ length: 16 });
-  const { userid, email, name, gender, mobileNumber, address, password } =
-    req.body;
+  const {
+    userid,
+    email,
+    name,
+    gender,
+    mobileNumber,
+    address,
+    password,
+    addharNumber,
+  } = req.body;
   let msgs = [];
   let finalImg;
 
@@ -46,6 +54,7 @@ module.exports.add = (req, res) => {
         mobileNumber,
         address,
         password,
+        addharNumber,
       });
     } else {
       User.findOne({ email: email }).then((result) => {
@@ -60,6 +69,7 @@ module.exports.add = (req, res) => {
             mobileNumber,
             address,
             password,
+            addharNumber,
           });
         } else {
           // User Not exists
@@ -73,6 +83,7 @@ module.exports.add = (req, res) => {
             token,
             photo: finalImg,
             password,
+            addharNumber,
           });
 
           // Hash Password
